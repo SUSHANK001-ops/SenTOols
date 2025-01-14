@@ -2,20 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+::-webkit-scrollbar {
+    width: 10px;               /* Width of vertical scrollbar */
+    height: 10px;              /* Height of horizontal scrollbar */
   }
-}
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;       /* Darker track color */
+    border-radius: 8px;        /* Rounded corners for track */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3b82f6;       /* Blue color for thumb */
+    border-radius: 8px;        /* Rounded corners for thumb */
+    border: 2px solid #1a1a1a; /* Creates padding around scroll thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;       
+  }
+  
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+  * {
+    scrollbar-width: thin;     /* "auto" or "thin" */
+    scrollbar-color: #3b82f6 #1a1a1a; /* thumb and track color */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
+  /* Custom scrollbar for specific container */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #3b82f6;
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
