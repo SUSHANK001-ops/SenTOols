@@ -227,7 +227,6 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Mobile Github Button */}
           <div className='mt-12'>
             <Link href="https://github.com/SUSHANK001-ops">
               <button 
