@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
       <Head>
         {/* Add Google AdSense verification meta tag */}
         <meta
-          name="google-site-verification"
-          content="your-verification-code"
+          name="google-adsense-account"
+          content="ca-pub-2939320826714458"
         />
         
         {/* Load Google AdSense script */}
