@@ -23,20 +23,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        {/* Add Google AdSense verification meta tag */}
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-2939320826714458"
-        />
-        
-        {/* Load Google AdSense script */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2939320826714458"
-          crossorigin="anonymous"
-        ></script>
-      </Head>
+      <head>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2939320826714458"
+     crossorigin="anonymous"></script>
+      </head>
       <link rel="shortcut icon" href="/SenTools.png" type="image/png" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

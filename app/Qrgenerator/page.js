@@ -9,9 +9,9 @@ export default function QRGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const qrRef = useRef(null);
-  const [adContent, setAdContent] = useState("");
 
-  const isAdEnvironment = typeof window !== "undefined" && window.location.hostname === "sushank.com.np";
+
+
 
   const generateQR = () => {
     if (!url) return;
@@ -38,39 +38,11 @@ export default function QRGenerator() {
     }, 500);
   };
 
-  useEffect(() => {
-    if (isAdEnvironment) {
-      setAdContent("Ad 1: Visit our store!");
-      const adInterval = setInterval(() => {
-        setAdContent((prevAd) =>
-          prevAd === "Ad 1: Visit our store!"
-            ? "Ad 2: Check out our new features!"
-            : "Ad 1: Visit our store!"
-        );
-      }, 40000);
 
-      const adTimeout = setTimeout(() => {
-        setAdContent("");
-      }, 5000);
-
-      return () => {
-        clearInterval(adInterval);
-        clearTimeout(adTimeout);
-      };
-    }
-  }, [isAdEnvironment]);
 
   return (
     <div className="relative min-h-screen p-8 transition-all duration-500">
-      {/* Ad Area (Visible only in specific environment) */}
-      {isAdEnvironment && adContent && (
-        <div className="absolute inset-0 z-0 flex items-center justify-center transition-opacity duration-1000">
-          <div className="bg-red-500 bg-opacity-50 text-white p-6 rounded-lg border-4 border-dashed border-white max-w-md mx-auto text-center">
-            <p className="font-bold">Advertisement</p>
-            <p>{adContent}</p>
-          </div>
-        </div>
-      )}
+     
 
       {/* QR Generator Area */}
       <div className="relative z-10 max-w-2xl mx-auto">
