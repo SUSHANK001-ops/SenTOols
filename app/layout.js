@@ -33,7 +33,8 @@ export default function RootLayout({ children }) {
         {/* Load Google AdSense script */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2939320826714458"
+          crossorigin="anonymous"
         ></script>
       </Head>
       <link rel="shortcut icon" href="/SenTools.png" type="image/png" />
