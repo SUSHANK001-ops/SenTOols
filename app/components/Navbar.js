@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
-import { Home, Info, Wrench, Mail, Github, Scissors, Clock, QrCode, Link as LinkIcon, Sparkles } from 'lucide-react';
+import { Home, Info, Wrench, Mail, Github, Lock, Clock, QrCode, Link as LinkIcon, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
   const toolsRef = useRef(null);
 
   const toolItems = [
-    { href: "/shorten", icon: Scissors, label: "URL Shortener" },
+    { href: "/Passwordgenerator", icon: Lock, label: "Password Generator" },
     { href: "/Qrgenerator", icon: QrCode, label: "QR Generator" },
     { href: "#", icon: Clock, label: "More Coming Soon", disabled: true }
   ];

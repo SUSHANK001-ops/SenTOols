@@ -27,3 +27,33 @@ export async function POST(request) {
     message: "URL Generated Successfully",
   });
 }
+// import { db } from "@/lib/firebase";
+// import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
+
+// export async function POST(request) {
+//   const body = await request.json();
+//   const urlsCollection = collection(db, "urls");
+
+//   // Check if the short URL exists
+//   const q = query(urlsCollection, where("shorturl", "==", body.shorturl));
+//   const querySnapshot = await getDocs(q);
+
+//   if (!querySnapshot.empty) {
+//     return Response.json({
+//       success: false,
+//       error: true,
+//       message: "URL already exists!",
+//     });
+//   }
+
+//   await addDoc(urlsCollection, {
+//     url: body.url,
+//     shorturl: body.shorturl,
+//   });
+
+//   return Response.json({
+//     success: true,
+//     error: false,
+//     message: "URL Generated Successfully",
+//   });
+// }

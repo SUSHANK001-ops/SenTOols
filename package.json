@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-tabs": "^1.1.2",
     "emailjs-com": "^3.2.0",
+    "firebase": "^11.1.0",
+    "firebase-admin": "^13.0.2",
+    "framer-motion": "^11.18.0",
     "lucide-react": "^0.471.1",
     "mongo": "^0.1.0",
     "mongodb": "^6.12.0",

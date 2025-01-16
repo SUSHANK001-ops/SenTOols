@@ -42,11 +42,11 @@ export default function Home() {
               </div>
               
               <div className="flex flex-row flex-wrap gap-4 justify-center md:justify-start mt-4">
-                <Link href="/shorten">
+                <Link href="/Passwordgenerator">
                   <button className="inline-flex items-center justify-center min-w-[180px] group relative bg-purple-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400 opacity-0 group-hover:opacity-30 transition-all duration-500 rounded-full animate-pulse"></div>
                     <LinkIcon className="w-5 h-5 group-hover:rotate-12 group-hover:scale-125 transition-all duration-700" />
-                    <span className="ml-2 group-hover:translate-x-2 transition-all duration-500">Shorten URL</span>
+                    <span className="ml-2 group-hover:translate-x-2 transition-all duration-500">Password Generator</span>
                   </button>
                 </Link>
                 <Link href="/Qrgenerator">
